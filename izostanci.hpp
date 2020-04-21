@@ -4,7 +4,9 @@
 class Izostanci
 {
 private:
-
+    int datum;
+    int tip;//moze biti opravdan i neopravdan
+    string razlog;//pise razredni kad pravda
 public:
 
 };

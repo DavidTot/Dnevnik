@@ -1,10 +1,13 @@
 #ifndef UCENIK_HPP_INCLUDED
 #define UCENIK_HPP_INCLUDED
 
-class Ucenik:public Osoba,public Razred,public Izostanci
-{
-private:
+#include"osoba.hpp"
+#include"izostanci.hpp"
 
+class Ucenik:public Izostanci
+{
+protected:
+    Osoba a;
 public:
 
 

@@ -1,11 +1,12 @@
 #ifndef DIREKTOR_HPP_INCLUDED
 #define DIREKTOR_HPP_INCLUDED
 
-class Direktor
+#include"profesor.hpp"
+
+class Direktor:public Profesor
 {
 private:
-    class Osoba;
-
+    string imeSkole;
 public:
 
 };

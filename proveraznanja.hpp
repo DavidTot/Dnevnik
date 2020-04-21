@@ -1,10 +1,12 @@
 #ifndef PROVERAZNANJA_HPP_INCLUDED
 #define PROVERAZNANJA_HPP_INCLUDED
 
-class ProveraZnanja{
-private:
-    class Ocena;
+#include"ocena.hpp"
 
+class ProveraZnanja:public Ocena
+{
+private:
+    string vrstaProvere;//iz odgovaranja,pismenog...
 public:
 
 };

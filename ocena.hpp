@@ -4,7 +4,8 @@
 class Ocena
 {
 private:
-
+    int datum;
+    int vrednost;//od 1 do 5
 public:
 
 };

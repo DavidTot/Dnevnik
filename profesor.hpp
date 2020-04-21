@@ -1,10 +1,13 @@
 #ifndef PROFESOR_HPP_INCLUDED
 #define PROFESOR_HPP_INCLUDED
 
-class Profesor:public Osoba,public Predmet
+#include"osoba.hpp"
+#include"predmet.hpp"
+
+class Profesor:public Predmet
 {
 private:
-
+   Osoba a;
 public:
 
 };

@@ -1,10 +1,13 @@
 #ifndef SMER_HPP_INCLUDED
 #define SMER_HPP_INCLUDED
 
-class Smer
+#include"razred.hpp"
+#include"predmet.hpp"
+
+class Smer:public Razred,public Predmet
 {
 private:
-
+    string naziv;
 public:
 
 };

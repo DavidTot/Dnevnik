@@ -32,7 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="direktor.hpp" />
+		<Unit filename="izostanci.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="ocena.hpp" />
+		<Unit filename="osoba.hpp" />
+		<Unit filename="predmet.hpp" />
+		<Unit filename="profesor.hpp" />
+		<Unit filename="proveraznanja.hpp" />
+		<Unit filename="razred.hpp" />
+		<Unit filename="razredni.hpp" />
+		<Unit filename="smer.hpp" />
+		<Unit filename="ucenik.hpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

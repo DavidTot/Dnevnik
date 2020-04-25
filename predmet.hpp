@@ -5,10 +5,11 @@
 #include"profesor.hpp"
 #include"ucenik.hpp"
 
-class Predmet:public ProveraZnanja , public Profesor , public Ucenik
+class Predmet:public Ucenik
 {
 private:
     string naziv;
+    ProveraZnanja A;
 public:
 
 };

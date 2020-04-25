@@ -4,10 +4,10 @@
 #include"osoba.hpp"
 #include"predmet.hpp"
 
-class Profesor:public Predmet
+class Profesor:public Osoba
 {
 private:
-   Osoba a;
+   Predmet A;
 public:
 
 };

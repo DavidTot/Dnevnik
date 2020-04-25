@@ -4,10 +4,12 @@
 #include"razred.hpp"
 #include"predmet.hpp"
 
-class Smer:public Razred,public Predmet
+class Smer
 {
 private:
     string naziv;
+    //Razred A;
+    Predmet B;
 public:
 
 };

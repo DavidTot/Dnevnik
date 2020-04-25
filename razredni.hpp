@@ -4,10 +4,10 @@
 #include"profesor.hpp"
 #include"razred.hpp"
 
-class Razredni:public Profesor,public Razred
+class Razredni:public Profesor
 {
 private:
-
+    Razred A;
 public:
 
 };

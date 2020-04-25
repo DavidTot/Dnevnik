@@ -4,7 +4,7 @@
 #include"ucenik.hpp"
 #include"smer.hpp"
 
-class Razred:public Ucenik,public Smer
+class Razred:public Ucenik
 {
 private:
     int brojRazreda;

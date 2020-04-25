@@ -3,11 +3,13 @@
 
 #include"osoba.hpp"
 #include"izostanci.hpp"
+#include"proveraznanja.hpp"
 
-class Ucenik:public Izostanci
+class Ucenik:public Osoba
 {
 protected:
-    Osoba a;
+    ProveraZnanja pz;
+    Izostanci i;
 public:
 
 

@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1587825499 source:c:\users\munja\desktop\dnevnik\main.cpp
+	<iostream>
+	"osoba.hpp"
+	"ucenik.hpp"
+	"profesor.hpp"
+	"direktor.hpp"
+	"ocena.hpp"
+	"izostanci.hpp"
+	"razred.hpp"
+	"razredni.hpp"
+	"predmet.hpp"
+	"smer.hpp"
+	"proveraznanja.hpp"
+
+1587821784 c:\users\munja\desktop\dnevnik\osoba.hpp
+
+1587824595 c:\users\munja\desktop\dnevnik\ucenik.hpp
+	"osoba.hpp"
+	"izostanci.hpp"
+	"proveraznanja.hpp"
+
+1587821784 c:\users\munja\desktop\dnevnik\izostanci.hpp
+
+1587825522 c:\users\munja\desktop\dnevnik\ocena.hpp
+
+1587819242 c:\users\munja\desktop\dnevnik\profesor.hpp
+	"osoba.hpp"
+	"predmet.hpp"
+
+1587819242 c:\users\munja\desktop\dnevnik\predmet.hpp
+	"proveraznanja.hpp"
+	"profesor.hpp"
+	"ucenik.hpp"
+
+1587825891 c:\users\munja\desktop\dnevnik\proveraznanja.hpp
+	"ocena.hpp"
+
+1587824761 c:\users\munja\desktop\dnevnik\direktor.hpp
+	"profesor.hpp"
+
+1587819281 c:\users\munja\desktop\dnevnik\razred.hpp
+	"ucenik.hpp"
+	"smer.hpp"
+
+1587820137 c:\users\munja\desktop\dnevnik\smer.hpp
+	"razred.hpp"
+	"predmet.hpp"
+
+1587819241 c:\users\munja\desktop\dnevnik\razredni.hpp
+	"profesor.hpp"
+	"razred.hpp"
+

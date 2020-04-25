@@ -8,7 +8,7 @@ class Direktor:public Profesor
 private:
     string imeSkole;
 public:
-
+   // Direktor():Profesor()
 };
 
 #endif // DIREKTOR_HPP_INCLUDED

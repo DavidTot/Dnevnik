@@ -3,7 +3,7 @@
 
 class Osoba
 {
-private:
+protected:
     string ime;
     string prezime;
     int godine;
@@ -42,6 +42,8 @@ public:
     {
         cout<<"Ja sam "<<ime<<" "<<prezime<<" i imam "<<godine<<" godina."<<endl;
     }
+    friend class Ucenik;
+    friend class Profesor;
 };
 
 

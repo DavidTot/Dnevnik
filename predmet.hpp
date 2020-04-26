@@ -5,13 +5,18 @@
 #include"profesor.hpp"
 #include"ucenik.hpp"
 
-class Predmet:public Ucenik
+class Predmet
 {
 private:
     string naziv;
-    ProveraZnanja A;
+    ProveraZnanja niz[];
 public:
-
+    Predmet(string n,string vp,string datum,int vrednost):niz(vrstaProvere,datum,vrednost)
+    {
+        naziv=n;
+    }
+    friend class Smer;
+    friend class Profesor;
 };
 
 #endif // PREDMET_HPP_INCLUDED

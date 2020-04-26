@@ -4,12 +4,17 @@
 #include"ucenik.hpp"
 #include"smer.hpp"
 
-class Razred:public Ucenik
+class Razred
 {
 private:
     int brojRazreda;
+    Ucenik niz[];
 public:
-
+    Razred(int brRazreda,string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost):niz(string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost)
+    {
+        brojRazreda=brRazreda;
+    }
+    friend class Smer;
 };
 
 #endif // RAZRED_HPP_INCLUDED

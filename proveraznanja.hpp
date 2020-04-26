@@ -9,7 +9,7 @@ protected:
     string vrstaProvere;//iz odgovaranja,pismenog...
     Ocena o;
 public:
-    ProveraZnanja(string vp,string datum,int vrednost):o(o.datum,o.vrednost)
+    ProveraZnanja(string vp,string datum,int vrednost):o(datum,vrednost)
     {
         vrstaProvere=vp;
     }
@@ -43,6 +43,7 @@ public:
         o.prikaziOcenu();
         cout<<"iz "<<vrstaProvere<<"."<<endl;
     }
+    friend class Predmet;
 };
 
 #endif // PROVERAZNANJA_HPP_INCLUDED

@@ -6,9 +6,17 @@
 
 class Profesor:public Osoba
 {
-private:
+protected:
    Predmet A;
+   Razred niz[];
 public:
+
+
+
+
+    friend class Direktor;
+    friend class Razredni;
+
 
 };
 

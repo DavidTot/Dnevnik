@@ -3,7 +3,7 @@
 
 class Izostanci
 {
-private:
+protected:
     string datum;
     int tip;//moze biti opravdan i neopravdan
     string razlog;
@@ -45,7 +45,7 @@ public:
         else
         cout<<"Opravdani izostanak sa casa "<<datum<<" jer je ucenik "<<razlog<<"."<<endl;
     }
-
+    friend class Ucenik;
 };
 
 #endif // IZOSTANCI_HPP_INCLUDED

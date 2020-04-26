@@ -10,11 +10,10 @@ private:
     int brojRazreda;
     Ucenik niz[];
 public:
-    Razred(int brRazreda,string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost):niz(string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost)
+    Razred(int brRazreda,string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost)//:niz(string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost)
     {
         brojRazreda=brRazreda;
     }
-    friend class Smer;
 };
 
 #endif // RAZRED_HPP_INCLUDED

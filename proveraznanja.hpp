@@ -43,7 +43,6 @@ public:
         o.prikaziOcenu();
         cout<<"iz "<<vrstaProvere<<"."<<endl;
     }
-    friend class Predmet;
 };
 
 #endif // PROVERAZNANJA_HPP_INCLUDED

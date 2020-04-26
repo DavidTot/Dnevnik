@@ -14,8 +14,6 @@ public:
 
 
 
-    friend class Direktor;
-    friend class Razredni;
 
 
 };

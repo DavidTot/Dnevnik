@@ -40,7 +40,6 @@ public:
         else
             cout<<"Ocena "<<vrednost<<" "<<datum<<" "<<endl;
     }
-    friend class ProveraZnanja;
 };
 
 #endif // OCENA_HPP_INCLUDED

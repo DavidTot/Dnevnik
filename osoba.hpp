@@ -42,8 +42,6 @@ public:
     {
         cout<<"Ja sam "<<ime<<" "<<prezime<<" i imam "<<godine<<" godina."<<endl;
     }
-    friend class Ucenik;
-    friend class Profesor;
 };
 
 

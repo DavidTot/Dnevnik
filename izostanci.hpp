@@ -45,7 +45,6 @@ public:
         else
         cout<<"Opravdani izostanak sa casa "<<datum<<" jer je ucenik "<<razlog<<"."<<endl;
     }
-    friend class Ucenik;
 };
 
 #endif // IZOSTANCI_HPP_INCLUDED

@@ -9,7 +9,7 @@ class Ucenik:public Osoba
 {
 protected:
     ProveraZnanja pz;
-    Izostanci niz[];
+    Izostanak niz[];
 public:
     Ucenik(string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost):pz(string vrstaprovere,string datumProv,vrednost),niz(string datumIz,int tip,string razlog),Osoba(string ime,string prezime,int godine)
     {

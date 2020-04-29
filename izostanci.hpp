@@ -1,14 +1,14 @@
 #ifndef IZOSTANCI_HPP_INCLUDED
 #define IZOSTANCI_HPP_INCLUDED
 
-class Izostanci
+class Izostanak
 {
 protected:
     string datum;
     int tip;//moze biti opravdan i neopravdan
     string razlog;
 public:
-    Izostanci(string d,int t,string r)
+    Izostanak(string d,int t,string r)
     {
         datum=d;
         tip=t;
@@ -41,9 +41,9 @@ public:
     void PrikaziIzostanak()
     {
         if(tip==0)
-        cout<<"Neopravdani izostanak sa casa "<<datum<<" jer je ucenik "<<razlog<<"."<<endl;
+            cout<<"Neopravdani izostanak sa casa "<<datum<<" jer je ucenik "<<razlog<<"."<<endl;
         else
-        cout<<"Opravdani izostanak sa casa "<<datum<<" jer je ucenik "<<razlog<<"."<<endl;
+            cout<<"Opravdani izostanak sa casa "<<datum<<" jer je ucenik "<<razlog<<"."<<endl;
     }
 };
 

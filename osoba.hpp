@@ -10,9 +10,9 @@ protected:
 public:
     Osoba(string i,string p,int g)
     {
-     ime=i;
-     prezime=p;
-     godine=g;
+        ime=i;
+        prezime=p;
+        godine=g;
     }
     string getIme()const
     {

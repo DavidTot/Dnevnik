@@ -24,5 +24,12 @@ int main()
     oc1.prikaziOcenu();
     cout<<endl<<endl;
     pz1.ispisiProveruZnanja();
+    //metode:
+    //profesor postaje razredni
+    //Upisi ucenika u razred
+    //Oceni,zakazi test
+    //Ispisi ocene,izostanke
+    //Funkcionalnost:
+    //Stvaranje zakljucne ocene na osnovu svih ocena i izostanaka
     return 0;
 }

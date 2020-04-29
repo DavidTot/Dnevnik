@@ -14,6 +14,11 @@ public:
     {
         brojRazreda=brRazreda;
     }
+    UpisiUcenika()
+    {
+        Ucenik Novi;
+        niz[n+1]=Novi;//n je duzina niza
+    }
 };
 
 #endif // RAZRED_HPP_INCLUDED

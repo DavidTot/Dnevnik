@@ -13,7 +13,7 @@ using namespace std;
 #include"predmet.hpp"
 #include"smer.hpp"
 #include"proveraznanja.hpp"
-#include"Fajl.txt"
+
 void IspisiFajl(string nazivFajla)
 {
     string linija;
@@ -34,7 +34,7 @@ void IspisiFajl(string nazivFajla)
 
 int main()
 {
-    IspisiFajl(Fajl);
+    IspisiFajl("Fajl.txt");
 
 
 

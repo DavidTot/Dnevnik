@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Fajl.txt" />
 		<Unit filename="direktor.hpp" />
 		<Unit filename="izostanci.hpp" />
 		<Unit filename="main.cpp" />

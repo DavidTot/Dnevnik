@@ -1,5 +1,7 @@
 #ifndef IZOSTANCI_HPP_INCLUDED
 #define IZOSTANCI_HPP_INCLUDED
+using namespace std;
+#include <string>
 
 class Izostanak
 {

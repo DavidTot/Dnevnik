@@ -1,23 +1,19 @@
 #ifndef RAZRED_HPP_INCLUDED
 #define RAZRED_HPP_INCLUDED
+using namespace std;
+#include <string>
 
 #include"ucenik.hpp"
-#include"smer.hpp"
 
 class Razred
 {
 private:
     int brojRazreda;
-    Ucenik niz[];
+    Ucenik uc;//niz
 public:
-    Razred(int brRazreda,string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost)//:niz(string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost)
+    Razred(int brR,string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost):uc(ime,prezime,godine,datumIz,tip,razlog,vrstaprovere,datumProv,vrednost)
     {
-        brojRazreda=brRazreda;
-    }
-    UpisiUcenika()
-    {
-        Ucenik Novi;
-        niz[n+1]=Novi;//n je duzina niza
+        brojRazreda=brR;
     }
 };
 

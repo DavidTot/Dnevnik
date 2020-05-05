@@ -12,6 +12,10 @@ using namespace std;
 #include"predmet.hpp"
 #include"smer.hpp"
 #include"proveraznanja.hpp"
+void IspisiFajl(string nazivFajla)
+{
+
+}
 
 int main()
 {
@@ -24,6 +28,7 @@ int main()
     oc1.prikaziOcenu();
     cout<<endl<<endl;
     pz1.ispisiProveruZnanja();
+
     //metode:
     //profesor postaje razredni
     //Upisi ucenika u razred

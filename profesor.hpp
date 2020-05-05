@@ -1,5 +1,7 @@
 #ifndef PROFESOR_HPP_INCLUDED
 #define PROFESOR_HPP_INCLUDED
+using namespace std;
+#include <string>
 
 #include"osoba.hpp"
 #include"predmet.hpp"

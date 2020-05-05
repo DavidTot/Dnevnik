@@ -1,5 +1,7 @@
 #ifndef OSOBA_HPP_INCLUDED
 #define OSOBA_HPP_INCLUDED
+using namespace std;
+#include <string>
 
 class Osoba
 {

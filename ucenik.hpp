@@ -1,5 +1,7 @@
 #ifndef UCENIK_HPP_INCLUDED
 #define UCENIK_HPP_INCLUDED
+using namespace std;
+#include <string>
 
 #include"osoba.hpp"
 #include"izostanci.hpp"
@@ -8,14 +10,13 @@
 class Ucenik:public Osoba
 {
 protected:
-    ProveraZnanja pz;
-    Izostanak niz[];
+    ProveraZnanja pz;//niz
+    Izostanak iz;//niz
 public:
-    Ucenik(string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost):pz(string vrstaprovere,string datumProv,vrednost),niz(string datumIz,int tip,string razlog),Osoba(string ime,string prezime,int godine)
+    Ucenik(string i,string pr,int god,string vp,string datum,int vrednost,string d,int t,string r):Osoba(i,pr,god),pz(vp,datum,vrednost),iz(d,t,r)
     {
 
     }
-
 
 
 };

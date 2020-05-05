@@ -1,5 +1,7 @@
 #ifndef OCENA_HPP_INCLUDED
 #define OCENA_HPP_INCLUDED
+using namespace std;
+#include <string>
 
 class Ocena
 {

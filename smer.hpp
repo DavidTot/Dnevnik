@@ -10,8 +10,8 @@ class Smer
 {
 private:
     string naziv;
-    Razred rz;//niz
-    Predmet pr;//niz
+    //Razred rz;//niz
+    //Predmet pr;//niz
 public:
     Smer(string n)
     {

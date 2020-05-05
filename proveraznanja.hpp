@@ -9,9 +9,9 @@ class ProveraZnanja
 {
 protected:
     string vrstaProvere;//iz odgovaranja,pismenog...
-    Ocena o;
+    Ocena oc;
 public:
-    ProveraZnanja(string vp,string datum,int vrednost):o(datum,vrednost)
+    ProveraZnanja(string vp,string datum,int vrednost):oc(datum,vrednost)
     {
         vrstaProvere=vp;
     }
@@ -21,11 +21,11 @@ public:
     }
     string getDatum()const
     {
-        return o.getDatum();
+        return oc.getDatum();
     }
     int getVrednost()const
     {
-        return o.getVrednost();
+        return oc.getVrednost();
     }
     void setVrstaProvere(string vp)
     {
@@ -33,16 +33,16 @@ public:
     }
     void setDatum(string d)
     {
-        o.setDatum(d);
+        oc.setDatum(d);
     }
     void setVrednost(int v)
     {
-        o.setVrednost(v);
+        oc.setVrednost(v);
     }
 
     void ispisiProveruZnanja()
     {
-        o.prikaziOcenu();
+        oc.prikaziOcenu();
         cout<<"iz "<<vrstaProvere<<"."<<endl;
     }
 };

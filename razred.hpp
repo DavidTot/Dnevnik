@@ -9,9 +9,9 @@ class Razred
 {
 private:
     int brojRazreda;
-    Ucenik uc;//niz
+    //Ucenik uc;//niz
 public:
-    Razred(int brR,string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost):uc(ime,prezime,godine,datumIz,tip,razlog,vrstaprovere,datumProv,vrednost)
+    Razred(int brR)
     {
         brojRazreda=brR;
     }

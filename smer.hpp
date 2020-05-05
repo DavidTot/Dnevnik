@@ -13,9 +13,9 @@ private:
     Razred rz;//niz
     Predmet pr;//niz
 public:
-    Smer():
+    Smer(string n)
     {
-        naziv=naziv;
+        naziv=n;
     }
 
 };

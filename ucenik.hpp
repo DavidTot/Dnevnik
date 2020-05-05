@@ -10,10 +10,10 @@ using namespace std;
 class Ucenik:public Osoba
 {
 protected:
-    ProveraZnanja pz;//niz
-    Izostanak iz;//niz
+    //ProveraZnanja pz;//niz
+    //Izostanak iz;//niz
 public:
-    Ucenik(string i,string pr,int god,string vp,string datum,int vrednost,string d,int t,string r):Osoba(i,pr,god),pz(vp,datum,vrednost),iz(d,t,r)
+    Ucenik(string i,string pr,int god):Osoba(i,pr,god)
     {
 
     }

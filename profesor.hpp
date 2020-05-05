@@ -10,20 +10,15 @@ using namespace std;
 class Profesor:public Osoba
 {
 protected:
-    Predmet A;
-    Razred niz[];
     int godineStaza;
+    Predmet pr;
+    //Razred rz;//niz
 public:
-    Profesor(string i,string p,int g,string n,string vp,string datum,int vrednost,int gs):A(string i,string p,int g)//,niz(string n,string vp,string datum,int vrednost)
+    Profesor(int gs,string ime,string prezime,int godine,string naziv,string vrstaprovere,string datum,int vrednost):Osoba(ime,prezime,godine),pr(naziv,vrstaprovere,datum,vrednost)
     {
         godineStaza=gs;
     }
-    ZakaziProveruZnanja()
-    {
-        ProveraZnanja Test1;
-        //moze da se postavi u neki fajl kom ucenici imaju pristup
-    }
-    void PostaviRazrednog(Profesor A)
+    /*void PostaviRazrednog(Profesor A)
     {
         if(godineStaza>=5)
         {
@@ -36,6 +31,7 @@ public:
             cout<<"Fali mu jos "<<5-A.godineStaza<<" da bi mogao da postane razredni"<<endl;
         }
     }
+    */
 
 
 };

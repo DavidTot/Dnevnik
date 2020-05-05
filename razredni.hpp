@@ -9,9 +9,9 @@ using namespace std;
 class Razredni:public Profesor
 {
 private:
-    Razred A;
+    Razred rz;
 public:
-    Razredni(const Profesor& p,int brRazreda,string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost):A(int brRazreda,string ime,string prezime,int godine,string datumIz,int tip,string razlog,string vrstaprovere,string datumProv,int vrednost)
+    Razredni(int gs,string ime,string prezime,int godine,string naziv,string vrstaprovere,string datum,int vrednost,int brR):Profesor(gs,ime,prezime,godine,naziv,vrstaprovere,datum,vrednost),rz(brR)
     {
 
     }

@@ -3,16 +3,15 @@
 using namespace std;
 #include <string>
 
-#include"profesor.hpp"
-#include"ucenik.hpp"
+#include"proveraznanja.hpp"
 
 class Predmet
 {
 private:
     string naziv;
-    Ucenik uc;//niz
+    ProveraZnanja pz;
 public:
-    Predmet(string n,string ime,string prezime,int godine,string vrstapr,string datumpr,int vrednostpr,string datumiz,int tipiz,string razlogiz):uc(ime,prezime,godine,vrstapr,datumpr,vrednostpr,datumiz,tipiz,razlogiz)
+    Predmet(string n,string vp,string datum,int vrednost):pz(vp,datum,vrednost)
     {
         naziv=n;
     }

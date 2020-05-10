@@ -44,6 +44,13 @@ public:
     {
         cout<<"Ja sam "<<ime<<" "<<prezime<<" i imam "<<godine<<" godina."<<endl;
     }
+    friend ostream& operator<<(ostream& izlaz,const Osoba& o)
+    {
+        izlaz<<"Ispis Osobe:"<<endl;
+        izlaz<<"Ime: "<<o.ime<<endl;
+        izlaz<<"Prezime: "<<o.prezime<<endl;
+        izlaz<<"Godine: "<<o.godine<<endl<<endl;
+    }
 };
 
 

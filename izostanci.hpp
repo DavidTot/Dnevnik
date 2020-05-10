@@ -47,6 +47,16 @@ public:
         else
             cout<<"Opravdani izostanak sa casa "<<datum<<" jer je ucenik "<<razlog<<"."<<endl;
     }
+    friend ostream& operator<<(ostream& izlaz,const Izostanak& iz)
+    {
+        izlaz<<"Ispis Izostanka:"<<endl;
+        izlaz<<"Datum: "<<iz.datum<<endl;
+        if(iz.tip==0)
+        izlaz<<"Tip: Neopravdani"<<endl;
+        else
+        izlaz<<"Tip: Opravdani"<<endl;
+        izlaz<<"Razlog: "<<iz.razlog<<endl<<endl;
+    }
 };
 
 #endif // IZOSTANCI_HPP_INCLUDED

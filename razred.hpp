@@ -9,6 +9,7 @@ class Razred
 {
 private:
     int brojRazreda;
+    static int brojUcenika;
     //Ucenik uc;//niz
 public:
     Razred(int brR)
@@ -16,5 +17,6 @@ public:
         brojRazreda=brR;
     }
 };
+int Razred::brojUcenika=0;
 
 #endif // RAZRED_HPP_INCLUDED

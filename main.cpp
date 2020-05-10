@@ -35,22 +35,18 @@ void IspisiFajl(string nazivFajla)
 int main()
 {
     IspisiFajl("Fajl.txt");
-
-
-
-
-
     Osoba o1("David","Tot",16);
-    Izostanak i1("16.10.2020.",0,"pobegao");
+    Izostanak iz1("16.10.2020.",0,"pobegao");
     Ocena oc1("26.4.2020",5);
     ProveraZnanja pz1("pismeni zadatak",oc1.getDatum(),oc1.getVrednost());
     o1.predstaviSe();
-    i1.PrikaziIzostanak();
+    iz1.PrikaziIzostanak();
+    pz1.ispisiProveruZnanja();
     oc1.prikaziOcenu();
     cout<<endl<<endl;
-    pz1.ispisiProveruZnanja();
-
-
+    cout<<o1;
+    cout<<iz1;
+    cout<<oc1;
     //metode:
     //profesor postaje razredni
     //Upisi ucenika u razred

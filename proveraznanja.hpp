@@ -45,6 +45,7 @@ public:
         oc.prikaziOcenu();
         cout<<"iz "<<vrstaProvere<<"."<<endl;
     }
+
 };
 
 #endif // PROVERAZNANJA_HPP_INCLUDED

@@ -42,6 +42,12 @@ public:
         else
             cout<<"Ocena "<<vrednost<<" "<<datum<<" "<<endl;
     }
+    friend ostream& operator<<(ostream& izlaz,const Ocena& oc)
+    {
+        izlaz<<"Ispis Ocene:"<<endl;
+        izlaz<<"Datum: "<<oc.datum<<endl;
+        izlaz<<"Vrednost: "<<oc.vrednost<<endl<<endl;
+    }
 };
 
 #endif // OCENA_HPP_INCLUDED

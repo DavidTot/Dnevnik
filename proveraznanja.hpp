@@ -2,6 +2,7 @@
 #define PROVERAZNANJA_HPP_INCLUDED
 using namespace std;
 #include <string>
+#include <vector>
 
 #include"ocena.hpp"
 

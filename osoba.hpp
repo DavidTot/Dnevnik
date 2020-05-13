@@ -2,6 +2,7 @@
 #define OSOBA_HPP_INCLUDED
 using namespace std;
 #include <string>
+#include <vector>
 
 class Osoba
 {
@@ -50,6 +51,7 @@ public:
         izlaz<<"Ime: "<<o.ime<<endl;
         izlaz<<"Prezime: "<<o.prezime<<endl;
         izlaz<<"Godine: "<<o.godine<<endl<<endl;
+        return izlaz;
     }
 };
 

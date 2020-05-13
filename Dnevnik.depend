@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1589117261 source:c:\users\munja\desktop\dnevnik\main.cpp
+1589387619 source:c:\users\munja\desktop\dnevnik\main.cpp
 	<iostream>
 	<fstream>
+	<vector>
 	"osoba.hpp"
 	"ucenik.hpp"
 	"profesor.hpp"
@@ -14,50 +15,61 @@
 	"smer.hpp"
 	"proveraznanja.hpp"
 
-1589118014 c:\users\munja\desktop\dnevnik\osoba.hpp
+1589388948 c:\users\munja\desktop\dnevnik\osoba.hpp
 	<string>
+	<vector>
 
-1588693843 c:\users\munja\desktop\dnevnik\ucenik.hpp
+1589389907 c:\users\munja\desktop\dnevnik\ucenik.hpp
 	<string>
+	<vector>
 	"osoba.hpp"
 	"izostanci.hpp"
 	"proveraznanja.hpp"
 
-1589118014 c:\users\munja\desktop\dnevnik\izostanci.hpp
+1589388948 c:\users\munja\desktop\dnevnik\izostanci.hpp
 	<string>
+	<vector>
 
-1589118014 c:\users\munja\desktop\dnevnik\ocena.hpp
+1589388948 c:\users\munja\desktop\dnevnik\ocena.hpp
 	<string>
+	<vector>
 
-1588693890 c:\users\munja\desktop\dnevnik\profesor.hpp
+1589389546 c:\users\munja\desktop\dnevnik\profesor.hpp
 	<string>
+	<vector>
 	"osoba.hpp"
 	"predmet.hpp"
 	"razred.hpp"
 
-1588693114 c:\users\munja\desktop\dnevnik\predmet.hpp
+1589388948 c:\users\munja\desktop\dnevnik\predmet.hpp
 	<string>
+	<vector>
 	"proveraznanja.hpp"
 
-1589117261 c:\users\munja\desktop\dnevnik\proveraznanja.hpp
+1589388948 c:\users\munja\desktop\dnevnik\proveraznanja.hpp
 	<string>
+	<vector>
 	"ocena.hpp"
 
-1589118212 c:\users\munja\desktop\dnevnik\direktor.hpp
+1589387619 c:\users\munja\desktop\dnevnik\direktor.hpp
 	<string>
+	<vector>
 	"profesor.hpp"
 
-1589118212 c:\users\munja\desktop\dnevnik\razred.hpp
+1589390164 c:\users\munja\desktop\dnevnik\razred.hpp
 	<string>
+	<vector>
 	"ucenik.hpp"
 
-1588694862 c:\users\munja\desktop\dnevnik\smer.hpp
+1589387619 c:\users\munja\desktop\dnevnik\smer.hpp
 	<string>
+	<vector>
 	"razred.hpp"
 	"predmet.hpp"
 
-1588693810 c:\users\munja\desktop\dnevnik\razredni.hpp
+1589389222 c:\users\munja\desktop\dnevnik\razredni.hpp
 	<string>
+	<vector>
 	"profesor.hpp"
 	"razred.hpp"
 

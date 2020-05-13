@@ -2,6 +2,7 @@
 #define IZOSTANCI_HPP_INCLUDED
 using namespace std;
 #include <string>
+#include <vector>
 
 class Izostanak
 {
@@ -56,6 +57,7 @@ public:
         else
         izlaz<<"Tip: Opravdani"<<endl;
         izlaz<<"Razlog: "<<iz.razlog<<endl<<endl;
+        return izlaz;
     }
 };
 

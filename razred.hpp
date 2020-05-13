@@ -2,21 +2,26 @@
 #define RAZRED_HPP_INCLUDED
 using namespace std;
 #include <string>
+#include <vector>
 
 #include"ucenik.hpp"
 
 class Razred
 {
 private:
-    int brojRazreda;
-    static int brojUcenika;
-    //Ucenik uc;//niz
+    int imeRazreda;
+    int brojUcenika;
+    vector<Ucenik> Ucenici;
 public:
-    Razred(int brR)
+    Razred(int imR,int brojUcenika=0)
     {
-        brojRazreda=brR;
+        imeRazreda=imR;
     }
+    DodajUcenika(int imeRazreda,Ucenik Uc)
+    {
+
+    }
+
 };
-int Razred::brojUcenika=0;
 
 #endif // RAZRED_HPP_INCLUDED

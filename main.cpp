@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-
+#include <vector>
 using namespace std;
 #include"osoba.hpp"
 #include"ucenik.hpp"
@@ -47,6 +47,8 @@ int main()
     cout<<o1;
     cout<<iz1;
     cout<<oc1;
+
+    Ucenik uc1("David","Tot",16);
     //metode:
     //profesor postaje razredni
     //Upisi ucenika u razred

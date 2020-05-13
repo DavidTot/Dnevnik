@@ -2,6 +2,7 @@
 #define OCENA_HPP_INCLUDED
 using namespace std;
 #include <string>
+#include <vector>
 
 class Ocena
 {
@@ -47,6 +48,7 @@ public:
         izlaz<<"Ispis Ocene:"<<endl;
         izlaz<<"Datum: "<<oc.datum<<endl;
         izlaz<<"Vrednost: "<<oc.vrednost<<endl<<endl;
+        return izlaz;
     }
 };
 

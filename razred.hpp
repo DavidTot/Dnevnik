@@ -17,8 +17,10 @@ public:
     {
         imeRazreda=imR;
     }
-    DodajUcenika(int imeRazreda,Ucenik Uc)
+    DodajUcenika(Ucenik Uc)
     {
+        for()
+            Ucenici[n+1]=Uc;
 
     }
 

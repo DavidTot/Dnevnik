@@ -10,11 +10,15 @@ class Predmet
 {
 private:
     string naziv;
-    vector<ProveraZnanja> ProvereZnanje;
+    vector<ProveraZnanja> ProvereZnanja;
 public:
     Predmet(string n)
     {
         naziv=n;
+    }
+    int getVrednost()const
+    {
+        return ProvereZnanja.getVrednost;
     }
 
 };

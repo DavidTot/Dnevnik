@@ -41,7 +41,7 @@ public:
     {
         godine=g;
     }
-    void predstaviSe()
+    virtual void predstaviSe()
     {
         cout<<"Ja sam "<<ime<<" "<<prezime<<" i imam "<<godine<<" godina."<<endl;
     }

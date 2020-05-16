@@ -16,9 +16,9 @@ public:
     {
         naziv=n;
     }
-    int getVrednost()const
+    int getVrednost(int i)const
     {
-        return ProvereZnanja.getVrednost;
+        return ProvereZnanja[i].getVrednost();
     }
 
 };

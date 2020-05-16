@@ -11,10 +11,15 @@ class Direktor:public Profesor
 private:
     string imeSkole;
 public:
-   Direktor(string is,string i,string p,int g,string n,string vp,string datum,int vrednost,int gs):Profesor(is,p,g,n,vp,datum,vrednost,gs)
+   Direktor(string is,int gs,string ime,string prezime,int godine,string naziv):Profesor(gs,ime,prezime,godine,naziv)
    {
        imeSkole=is;
    }
+   void predstaviSe()
+    {
+        Osoba::predstaviSe();
+        cout<<"I ja sam DIREKTOR"<<endl;
+    }
 };
 
 #endif // DIREKTOR_HPP_INCLUDED

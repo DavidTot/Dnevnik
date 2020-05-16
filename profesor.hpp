@@ -19,6 +19,11 @@ public:
     {
         godineStaza=gs;
     }
+    void predstaviSe()
+    {
+        Osoba::predstaviSe();
+        cout<<"Ja sam PROFESOR i predajem vec "<<godineStaza<<" godine."<<endl<<endl;
+    }
 
 
 

@@ -5,23 +5,32 @@ using namespace std;
 #include <vector>
 
 #include"ucenik.hpp"
+#include"proveraznanja.hpp"
 
 class Razred
 {
 private:
-    int imeRazreda;
-    int brojUcenika;
+    string imeRazreda;
+    int brojUcenika=0;
     vector<Ucenik> Ucenici;
 public:
-    Razred(int imR,int brojUcenika=0)
+    Razred(string imR)
     {
         imeRazreda=imR;
     }
-    DodajUcenika(Ucenik Uc)
+    void DodajUcenika(Ucenik Uc)
     {
-        for()
-            Ucenici[n+1]=Uc;
-
+        Ucenici.push_back(Uc);
+        brojUcenika=brojUcenika+1;
+    }
+    void IspisRazreda(Razred rz)
+    {
+        unsigned long long int i;
+        cout<<"Mi smo ucenici "<<imeRazreda<<":"<<endl;
+        for(i=0; i<Ucenici.size(); i++)
+        {
+            Ucenici[i].predstaviSe();
+        }
     }
 
 };

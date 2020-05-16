@@ -12,9 +12,14 @@ class Razredni:public Profesor
 private:
     Razred rz;
 public:
-    Razredni(int gs,string ime,string prezime,int godine,string naziv,int brR):Profesor(gs,ime,prezime,godine,naziv),rz(brR)
+    Razredni(int gs,string ime,string prezime,int godine,string naziv,string brR):Profesor(gs,ime,prezime,godine,naziv),rz(brR)
     {
 
+    }
+    void predstaviSe()
+    {
+        Osoba::predstaviSe();
+        cout<<"I ja sam RAZREDNI"<<endl;
     }
 
 

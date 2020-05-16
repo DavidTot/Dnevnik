@@ -47,8 +47,19 @@ int main()
     cout<<o1;
     cout<<iz1;
     cout<<oc1;
-
+    Profesor pr1(2,"Davor","Kumozec",27,"Diskretna Matematika");
+    pr1.predstaviSe();
     Ucenik uc1("David","Tot",16);
+    uc1.predstaviSe();
+    Ucenik uc2("Marko","Markovic",16);
+    Ucenik uc3("Milos","Milosevic",16);
+
+
+    Razred rz1("2-6");
+    rz1.DodajUcenika(uc1);
+    rz1.DodajUcenika(uc2);
+    rz1.DodajUcenika(uc3);
+    rz1.IspisRazreda(rz1);
     //metode:
     //profesor postaje razredni
     //Upisi ucenika u razred

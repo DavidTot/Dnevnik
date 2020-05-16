@@ -14,7 +14,7 @@ class Ucenik:public Osoba
 protected:
     vector<ProveraZnanja> ProvereZnanja;
     vector<Izostanak> Izostanci;
-    static int BrojUcenika;
+    static int BrojUcenika;//U celoj skoli
 public:
     Ucenik(string i,string pr,int god):Osoba(i,pr,god)
     {
@@ -23,18 +23,23 @@ public:
     double ProsecnaOcenaIz(Predmet pr)
     {
         int zbir=0;
-        int i;
-        for(auto i=begin();i<end();i++)
+        unsigned long long int i;
+        for(i=0;i<ProvereZnanja.size();i++)
         {
-            zbir=pr.ProvereZnanja[i]+zbir;
+            zbir=pr.getVrednost(i)+zbir;
         }
         return zbir/i;
+    }
+    void predstaviSe()
+    {
+        Osoba::predstaviSe();
+        cout<<"I ja sam UCENIK"<<endl<<endl;
     }
 
 
 
 };
-
+int Ucenik::BrojUcenika=0;
 
 
 #endif // UCENIK_HPP_INCLUDED

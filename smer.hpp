@@ -18,6 +18,14 @@ public:
     {
         naziv=n;
     }
+    void DodajRazred(Razred rz)
+    {
+        Razredi.push_back(rz);
+    }
+    void DodajPredmet(Predmet pr)
+    {
+        Predmeti.push_back(pr);
+    }
 
 };
 

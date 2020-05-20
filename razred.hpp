@@ -32,6 +32,20 @@ public:
             Ucenici[i].predstaviSe();
         }
     }
+    void DaLiIdeURazred(Ucenik uc1)//pretraga vectora
+    {
+        unsigned long long int i;
+        for(i=0;i<Ucenici.size();i++)
+        {
+            if(Ucenici[i].getIme()==uc1.getIme() && Ucenici[i].getPrezime()==uc1.getPrezime())
+            {
+                cout<<"Ucenik "<<" ide u razred "<<imeRazreda<<"."<<endl;
+                return;
+            }
+        }
+        cout<<"Ucenik "<<" ne ide u razred "<<imeRazreda<<"."<<endl;
+
+    }
 
 };
 

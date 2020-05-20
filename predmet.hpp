@@ -20,6 +20,10 @@ public:
     {
         return ProvereZnanja[i].getVrednost();
     }
+    void ZakaziProveru(ProveraZnanja pz1)
+    {
+        ProvereZnanja.push_back(pz1);
+    }
 
 };
 

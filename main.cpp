@@ -38,17 +38,17 @@ int main()
     Osoba o1("David","Tot",16);
     Izostanak iz1("16.10.2020.",0,"pobegao");
     Ocena oc1("26.4.2020",5);
-    ProveraZnanja pz1("pismeni zadatak",oc1.getDatum(),oc1.getVrednost());
+    ProveraZnanja proz1("pismeni zadatak",oc1.getDatum(),oc1.getVrednost());
     o1.predstaviSe();
     iz1.PrikaziIzostanak();
-    pz1.ispisiProveruZnanja();
+    proz1.ispisiProveruZnanja();
     oc1.prikaziOcenu();
     cout<<endl<<endl;
     cout<<o1;
     cout<<iz1;
     cout<<oc1;
-    Profesor pr1(2,"Davor","Kumozec",27,"Diskretna Matematika");
-    pr1.predstaviSe();
+    Profesor prof1(2,"Davor","Kumozec",27,"Diskretna Matematika");
+    prof1.predstaviSe();
     Ucenik uc1("David","Tot",16);
     uc1.predstaviSe();
     Ucenik uc2("Marko","Markovic",16);
@@ -60,6 +60,20 @@ int main()
     rz1.DodajUcenika(uc2);
     rz1.DodajUcenika(uc3);
     rz1.IspisRazreda(rz1);
+
+    Predmet pr1("Programiranje");
+    Predmet pr2("Matematika");
+    Predmet pr3("Srpski");
+    ProveraZnanja pz1("Kontrolni","12.3.2020",5);
+    ProveraZnanja pz2("Odgovaranje","17.2.2020",4);
+    ProveraZnanja pz3("Aktivnost","16.5.2020",5);
+
+    pr1.ZakaziProveru(pz1);
+    pr1.ZakaziProveru(pz2);
+    pr1.ZakaziProveru(pz3);
+    double ocena;
+    ocena=uc1.ProsecnaOcenaIz(pr1);
+    cout<<ocena;
     //metode:
     //profesor postaje razredni
     //Upisi ucenika u razred

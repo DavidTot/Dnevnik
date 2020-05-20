@@ -39,11 +39,11 @@ public:
         {
             if(Ucenici[i].getIme()==uc1.getIme() && Ucenici[i].getPrezime()==uc1.getPrezime())
             {
-                cout<<"Ucenik "<<" ide u razred "<<imeRazreda<<"."<<endl;
+                cout<<"Ucenik ide u razred "<<imeRazreda<<"."<<endl;
                 return;
             }
         }
-        cout<<"Ucenik "<<" ne ide u razred "<<imeRazreda<<"."<<endl;
+        cout<<"Ucenik ne ide u razred "<<imeRazreda<<"."<<endl;
 
     }
 

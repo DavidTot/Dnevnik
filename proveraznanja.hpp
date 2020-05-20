@@ -11,6 +11,7 @@ class ProveraZnanja
 protected:
     string vrstaProvere;//iz odgovaranja,pismenog...
     Ocena oc;
+    string predmet;
 public:
     ProveraZnanja(string vp,string datum,int vrednost):oc(datum,vrednost)
     {
@@ -23,6 +24,10 @@ public:
     string getDatum()const
     {
         return oc.getDatum();
+    }
+    string getNazivPredmeta()const
+    {
+        return predmet;
     }
     int getVrednost()const
     {
@@ -44,7 +49,7 @@ public:
     void ispisiProveruZnanja()
     {
         oc.prikaziOcenu();
-        cout<<"iz "<<vrstaProvere<<"."<<endl;
+        cout<<"iz "<<vrstaProvere<<" iz "<<predmet<<endl;
     }
 
 };

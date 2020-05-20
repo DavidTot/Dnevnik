@@ -15,6 +15,7 @@ class Ucenik:public Osoba
 {
 protected:
     vector<Izostanak> Izostanci;
+    vector<ProveraZnanja> ProvereZnanja;
     vector<Predmet> Predmeti;
     static int BrojUcenika;//U celoj skoli
 public:
@@ -22,17 +23,29 @@ public:
     {
 
     }
+    void ZakaziProveruUc(ProveraZnanja pz1)
+    {
+        ProvereZnanja.push_back(pz1);
+    }
+    void DodajPredmet(Predmet pr1)
+    {
+        Predmeti.push_back(pr1);
+    }
     double ProsecnaOcenaIz(Predmet pr)
     {
         double zbir=0;
-        unsigned long long int i;
-        for(i=0; i<Predmeti.size(); i++)
+        unsigned long long int i,broj;
+        for(i=0; i<ProvereZnanja.size(); i++,broj++)
         {
-            zbir=pr.getVrednost(i)+zbir;
+            if ((ProvereZnanja.at(i)).getNazivPredmeta()==pr.getNaziv())
+            {
+                zbir=ProvereZnanja.at(i).getVrednost()+zbir;
+            }
         }
-        return zbir/i;
+        return zbir/broj;
     }
-    int OcenaIzVladanja()
+
+    /*int OcenaIzVladanja()
     {
         int ocena;
         int ni=0;//neopravdani izostanci
@@ -49,7 +62,7 @@ public:
         if(ni>=10){return ocena=3;}
         if(ni>=5){return ocena=4;}
         return ocena=5;
-    }
+    }*/
     void predstaviSe()
     {
         Osoba::predstaviSe();
@@ -58,17 +71,22 @@ public:
     double Funkcionalnost(Ucenik uc1)
     {
         unsigned long long int i;
-        int zbir=0,ocena;
+        int zbir=0,ocena,broj;
         double oc;
-        for(i=0;i<Predmeti.size();i++)
+        for(i=0;i<Predmeti.size();i++,broj++)
         {
             oc=uc1.ProsecnaOcenaIz(Predmeti[i]);
             ocena=round(oc);
             zbir=zbir+ocena;
         }
-        int vladanje=uc1.OcenaIzVladanja();
-        double prosecna=zbir+vladanje/(Predmeti.size()+1);
-        cout<<"Ucenik "<<" ima prosek: "<<prosecna<<endl;
+        //int vladanje=uc1.OcenaIzVladanja();
+        //double prosecna=zbir+vladanje/(broj+1);
+        double prosecna=zbir/broj;
+        cout<<"Ucenik ima prosek: "<<prosecna<<endl;
+        ofstream Fajl2;
+        Fajl2.open("Fajl2.txt");
+        Fajl2<<"Prosek ucenika je:"<<prosecna;
+        Fajl2.close();
         return prosecna;
     }
 
@@ -77,3 +95,4 @@ int Ucenik::BrojUcenika=0;
 
 
 #endif // UCENIK_HPP_INCLUDED
+

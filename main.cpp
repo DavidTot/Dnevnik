@@ -68,12 +68,17 @@ int main()
     ProveraZnanja pz2("Odgovaranje","17.2.2020",4);
     ProveraZnanja pz3("Aktivnost","16.5.2020",5);
 
-    pr1.ZakaziProveru(pz1);
-    pr1.ZakaziProveru(pz2);
-    pr1.ZakaziProveru(pz3);
+    pr1.ZakaziProveruPr(pz1);
+    pr1.ZakaziProveruPr(pz2);
+    pr1.ZakaziProveruPr(pz3);
+
+    uc1.ZakaziProveruUc(pz1);//Dodavanje za ucenika?
+    uc1.ZakaziProveruUc(pz2);
+    uc1.ZakaziProveruUc(pz3);
     double ocena;
     ocena=uc1.ProsecnaOcenaIz(pr1);
     cout<<ocena;
+
     //metode:
     //profesor postaje razredni
     //Upisi ucenika u razred
@@ -83,3 +88,4 @@ int main()
     //Stvaranje zakljucne ocene na osnovu svih ocena i izostanaka
     return 0;
 }
+

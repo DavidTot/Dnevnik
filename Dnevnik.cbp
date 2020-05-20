@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Fajl.txt" />
+		<Unit filename="Fajl2.txt" />
 		<Unit filename="direktor.hpp" />
 		<Unit filename="izostanci.hpp" />
 		<Unit filename="main.cpp" />

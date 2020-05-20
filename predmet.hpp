@@ -18,9 +18,13 @@ public:
     }
     int getVrednost(int i)const
     {
-        return ProvereZnanja[i].getVrednost();
+        return ProvereZnanja.at(i).getVrednost();
     }
-    void ZakaziProveru(ProveraZnanja pz1)
+    string getNaziv()const
+    {
+        return naziv;
+    }
+    void ZakaziProveruPr(ProveraZnanja pz1)
     {
         ProvereZnanja.push_back(pz1);
     }
@@ -28,3 +32,4 @@ public:
 };
 
 #endif // PREDMET_HPP_INCLUDED
+

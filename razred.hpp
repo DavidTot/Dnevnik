@@ -18,6 +18,10 @@ public:
     {
         imeRazreda=imR;
     }
+    string getIme()const
+    {
+        return imeRazreda;
+    }
     void DodajUcenika(Ucenik Uc)
     {
         Ucenici.push_back(Uc);
@@ -29,7 +33,7 @@ public:
         cout<<"Mi smo ucenici "<<imeRazreda<<":"<<endl;
         for(i=0; i<Ucenici.size(); i++)
         {
-            Ucenici[i].predstaviSe();
+            Ucenici.at(i).predstaviSe();
         }
     }
     void DaLiIdeURazred(Ucenik uc1)//pretraga vectora

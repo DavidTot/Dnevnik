@@ -32,7 +32,7 @@ void IspisiFajl(string nazivFajla)
         cout<<"Neuspesno otvaranje fajla.";
     }
 }
-void StvoriOsobu()
+Osoba StvoriOsobu()
 {
     system("cls");
     string ime,prezime;
@@ -46,8 +46,9 @@ void StvoriOsobu()
     Osoba Osoba1(ime,prezime,godine);
     cout<<"Stvorena je osoba,predstavi se:";
     Osoba1.predstaviSe();
+    return Osoba1;
 }
-void StvoriUcenika()
+Ucenik StvoriUcenika()
 {
     system("cls");
     string ime,prezime;
@@ -61,8 +62,9 @@ void StvoriUcenika()
     Ucenik Ucenik1(ime,prezime,godine);
     cout<<"Stvoren je ucenik,predstavi se:";
     Ucenik1.predstaviSe();
+    return Ucenik1;
 }
-void StvoriProfesora()
+Profesor StvoriProfesora()
 {
     system("cls");
     string ime,prezime,predmet;
@@ -80,8 +82,9 @@ void StvoriProfesora()
     Profesor Profesor1(godinestaza,ime,prezime,godine,predmet);
     cout<<"Stvoren je profesor,predstavi se:";
     Profesor1.predstaviSe();
+    return Profesor1;
 }
-void StvoriIzostanak()
+Izostanak StvoriIzostanak()
 {
     system("cls");
     string datum,razlog;
@@ -95,8 +98,9 @@ void StvoriIzostanak()
     Izostanak Izostanak1(datum,tip,razlog);
     cout<<"Stvoren je izostanak,ispisi ga:";
     Izostanak1.PrikaziIzostanak();
+    return Izostanak1;
 }
-void StvoriOcenu()
+Ocena StvoriOcenu()
 {
     system("cls");
     string datum;
@@ -108,43 +112,47 @@ void StvoriOcenu()
     Ocena Ocena1(datum,vrednost);
     cout<<"Stvorena je ocena,ispisi je:";
     Ocena1.prikaziOcenu();
+    return Ocena1;
 }
-void StvoriProveruZnanja()
+ProveraZnanja StvoriProveruZnanja()
 {
     system("cls");
-            string predmet,vrstaprovere,datum;
-            int vrednost;
-            cout<<"Unesi datum Provere znanja:";
-            cin>>datum;
-            cout<<"Unesi vrednost Provere znanja(Od 1 do 5):";
-            cin>>vrednost;
-            cout<<"Unesi predmet za Proveru znanja:";
-            cin>>predmet;
-            cout<<"Unesi vrstu Provere znanja:";
-            cin>>vrstaprovere;
-            ProveraZnanja ProveraZnanja1(predmet,vrstaprovere,datum,vrednost);
-            cout<<"Stvorena je provera znanja,ispisi je:";
-            ProveraZnanja1.ispisiProveruZnanja();
+    string predmet,vrstaprovere,datum;
+    int vrednost;
+    cout<<"Unesi datum Provere znanja:";
+    cin>>datum;
+    cout<<"Unesi vrednost Provere znanja(Od 1 do 5):";
+    cin>>vrednost;
+    cout<<"Unesi predmet za Proveru znanja:";
+    cin>>predmet;
+    cout<<"Unesi vrstu Provere znanja:";
+    cin>>vrstaprovere;
+    ProveraZnanja ProveraZnanja1(predmet,vrstaprovere,datum,vrednost);
+    cout<<"Stvorena je provera znanja,ispisi je:";
+    ProveraZnanja1.ispisiProveruZnanja();
+    return ProveraZnanja1;
 }
-void StvoriPredmet()
+Predmet StvoriPredmet()
 {
     system("cls");
-            string naziv;
-            cout<<"Unesi naziv Predmeta:";
-            cin>>naziv;
-            Predmet Predmet1(naziv);
-            cout<<"Stvoren je predmet,ispisi ga:";
-            cout<<naziv;
+    string naziv;
+    cout<<"Unesi naziv Predmeta:";
+    cin>>naziv;
+    Predmet Predmet1(naziv);
+    cout<<"Stvoren je predmet,ispisi ga:";
+    cout<<naziv;
+    return Predmet1;
 }
-void StvoriRazred()
+Razred StvoriRazred()
 {
     system("cls");
-            string imerazreda;
-            cout<<"Unesi ime Razreda:";
-            cin>>imerazreda;
-            Razred Razred1(imerazreda);
-            cout<<"Stvoren je razred,prikazi ga:";
-            cout<<imerazreda;
+    string imerazreda;
+    cout<<"Unesi ime Razreda:";
+    cin>>imerazreda;
+    Razred Razred1(imerazreda);
+    cout<<"Stvoren je razred,prikazi ga:";
+    cout<<imerazreda;
+    return Razred1;
 }
 
 int main()
@@ -230,11 +238,22 @@ int main()
         cout<<"Unesi 5 za stvaranje ocene"<<endl;
         cout<<"Unesi 6 za stvaranje provere znanja"<<endl;
         cout<<"Unesi 7 za stvaranje predmeta"<<endl;
-        cout<<"Unesi 8 za stvaranje razred"<<endl;
+        cout<<"Unesi 8 za stvaranje razreda"<<endl;
         cout<<"Unesi 9 za dodavanje ucenika u razred"<<endl;
         cout<<"Unesi 10 za ispis ucenika razreda"<<endl;
+        cout<<"Unesi 11 za pretragu ucenika u razredima"<<endl;
+        cout<<"Unesi 12 za izracunavanje ocene iz predmeta"<<endl;
         cout<<"Za izlazak unesi 0"<<endl;
         cin>>x;
+        vector<Osoba> Osobe;
+        vector<Ucenik> Ucenici;
+        vector<Profesor> Profesori;
+        vector<Izostanak> Izostanci;
+        vector<Ocena> Ocene;
+        vector<ProveraZnanja> ProvereZnanja;
+        vector<Predmet> Predmeti;
+        vector<Razred> Razredi;
+
         if(x==0)
         {
             cout<<"**********IZLAZAK IZ PROGRAMA**********";
@@ -242,55 +261,168 @@ int main()
         }
         if(x==1)
         {
-            StvoriOsobu();
+            int brojO;
+            cout<<"Koliko osoba zelite da stvorite:";
+                cin>>brojO;
+            for(int i=0; i<brojO; i++)
+            {
+                Osobe.push_back(StvoriOsobu());
+                Sleep(3000);
+            }
         }
         if(x==2)
         {
-            StvoriUcenika();
+            int brojU;
+            cout<<"Koliko ucenika zelite da stvorite:";
+                cin>>brojU;
+            for(int i=0; i<brojU; i++)
+            {
+                Ucenici.push_back(StvoriUcenika());
+                Sleep(3000);
+            }
+
         }
         if(x==3)
         {
-            StvoriProfesora();
+            int brojP;
+            cout<<"Koliko profesora zelite da stvorite:";
+                cin>>brojP;
+            for(int i=0; i<brojP; i++)
+            {
+                Profesori.push_back(StvoriProfesora());
+                Sleep(3000);
+            }
         }
         if(x==4)
         {
-            StvoriIzostanak();
+            int brojI;
+            cout<<"Koliko izostnaka zelite da stvorite:";
+                cin>>brojI;
+            for(int i=0; i<brojI; i++)
+            {
+                Izostanci.push_back(StvoriIzostanak());
+                Sleep(3000);
+            }
         }
         if(x==5)
         {
-            StvoriOcenu();
+            int brojO;
+            cout<<"Koliko ocena zelite da stvorite:";
+                cin>>brojO;
+            for(int i=0; i<brojO; i++)
+            {
+                Ocene.push_back(StvoriOcenu());
+                Sleep(3000);
+            }
         }
         if(x==6)
         {
-            StvoriProveruZnanja();
+            int brojPz;
+            cout<<"Koliko provera znanja zelite da stvorite:";
+                cin>>brojPz;
+            for(int i=0; i<brojPz; i++)
+            {
+                ProvereZnanja.push_back(StvoriProveruZnanja());
+                Sleep(3000);
+            }
         }
         if(x==7)
         {
-            StvoriPredmet();
+            int brojPr;
+
+            cout<<"Koliko predmeta zelite da stvorite:";
+                cin>>brojPr;
+            for(int i=0; i<brojPr; i++)
+            {
+                Predmeti.push_back(StvoriPredmet());
+                Sleep(3000);
+            }
         }
         if(x==8)
         {
-            StvoriRazred();
+            int brojR;
+            cout<<"Koliko razreda zelite da stvorite:";
+                cin>>brojR;
+            for(int i=0; i<brojR; i++)
+            {
+                Razredi.push_back(StvoriRazred());
+                Sleep(3000);
+            }
         }
         if(x==9)
         {
             system("cls");
-            cout<<"Unesi ucenika kojeg zelis da upises u razred:";
-            //cin>>Ucenik1;
-            Ucenik Ucenik1("Marko","Markovic",17);
-            Razred Razred1("2-6");
-            Razred1.DodajUcenika(Ucenik1);
-            cout<<"Ucenik ";
-            Ucenik1.predstaviSe();
-            cout<<" je upisan u 2-6";
+            string ime,prezime,imeR;
+            cout<<"Unesi ime i prezime ucenika kojeg zelis da dodas:"<<endl;
+            cout<<"Ime:";
+            cin>>ime;
+            cout<<"Prezime";
+            cin>>prezime;
+            cout<<"Unesi ime razreda:";
+            cin>>imeR;
+            for(int i=0;i<Ucenici.size();i++)
+            {
+                if(Ucenici.at(i).getIme()==ime && Ucenici.at(i).getPrezime()==prezime)
+                {
+                    for(int j=0;j<Razredi.size();j++)
+                    {
+                        if(Razredi.at(j).getIme()==imeR)
+                        {
+                            Razred.at(j).Ucenici.push_back(Ucenici.at(i));
+                        }
+                    }
+                }
+            }
         }
         if(x==10)
         {
             system("cls");
-            cout<<"Unesi razred:";
-            //cin>>Razred1;
-            Razred Razred1("2-6");
-            Razred1.IspisRazreda(Razred1);
+            string imeR;
+            cout<<"Unesi ime razreda:";
+            cin>>imeR;
+            for(int i=0;i<Razredi.size();i++)
+            {
+                if(Razredi.at(i).getIme()==imeR)
+                {
+                    for(int j=0;j<Ucenici.size();j++)
+                    {
+                        Razredi.at(i).Ucenici.at(j).predstaviSe();
+                    }
+                }
+            }
+        }
+        if(x==11)
+        {
+            system("cls");
+            string imeR,ime;
+            cout<<"Unesi ime razreda:";
+            cin>>imeR;
+            cout<<"Unesi ime ucenika:";
+            cin>>ime;
+            for(int i=0;i<Razredi.size();i++)
+            {
+                if(Razredi.at(i).getIme()==imeR)
+                {
+                    for(int j=0;j<Ucenici.size();j++)
+                    {
+                        if(Razredi.at(i).Ucenici.at(j).getIme()==ime)
+                        {
+                            cout<<"Ucenik ide u "<<imeR<<endl;
+                        }
+                    }
+                }
+            }
+            cout<<"Ucenik nije pronadjen..."<<endl;
+
+        }
+        if(x==12)
+        {
+            system("cls");
+            string naziv;
+            cout<<"Unesi naziv predmeta";
+            cin>>naziv;
+
+
         }
 
 

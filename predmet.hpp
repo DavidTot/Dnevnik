@@ -12,6 +12,10 @@ private:
     string naziv;
     vector<ProveraZnanja> ProvereZnanja;
 public:
+    Predmet()
+    {
+        naziv="programiranje";
+    }
     Predmet(string n)
     {
         naziv=n;
@@ -27,6 +31,10 @@ public:
     void ZakaziProveruPr(ProveraZnanja pz1)
     {
         ProvereZnanja.push_back(pz1);
+    }
+    void IspisP()
+    {
+        cout<<"Ime predmeta je "<<naziv<<endl;
     }
 
 };

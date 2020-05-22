@@ -11,6 +11,12 @@ protected:
     int tip;//moze biti opravdan i neopravdan
     string razlog;
 public:
+    Izostanak()
+    {
+        datum="16.10.2020";
+        tip=0;
+        razlog="nema";
+    }
     Izostanak(string d,int t,string r)
     {
         datum=d;

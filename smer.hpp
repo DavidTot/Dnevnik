@@ -14,6 +14,10 @@ private:
     vector<Razred> Razredi;
     vector<Predmet> Predmeti;
 public:
+    Smer()
+    {
+        naziv="Informaticki";
+    }
     Smer(string n)
     {
         naziv=n;

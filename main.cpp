@@ -227,6 +227,14 @@ int main()
     cout<<endl<<endl<<endl<<endl;
     */
     int uslov=1,x;
+    vector<Osoba> Osobe1;
+    vector<Ucenik> Ucenici1;
+    vector<Profesor> Profesori1;
+    vector<Izostanak> Izostanci1;
+    vector<Ocena> Ocene1;
+    vector<ProveraZnanja> ProvereZnanja1;
+    vector<Predmet> Predmeti1;
+    vector<Razred> Razredi1;
     do
     {
         system("cls");
@@ -241,18 +249,25 @@ int main()
         cout<<"Unesi 8 za stvaranje razreda"<<endl;
         cout<<"Unesi 9 za dodavanje ucenika u razred"<<endl;
         cout<<"Unesi 10 za ispis ucenika razreda"<<endl;
-        cout<<"Unesi 11 za pretragu ucenika u razredima"<<endl;
-        cout<<"Unesi 12 za izracunavanje ocene iz predmeta"<<endl;
+        cout<<"Unesi 11 za pretragu ucenika u razredu"<<endl;
+        cout<<"Unesi 12 za zakazivanje provere znanja uceniku"<<endl;
+        cout<<"Unesi 13 za dodavanje izostanka uceniku"<<endl;
+        cout<<"Unesi 14 za dodavanje predmeta uceniku"<<endl;
+        cout<<"Unesi 15 za izracunavanje ocene iz predmeta"<<endl;
+        cout<<"Unesi 16 za izracunavanje ocene iz vladanja"<<endl;
+        cout<<"Unesi 17 za izracunavanje proseka ucenika"<<endl;
+        cout<<"Unesi 18 za ispis svih osoba"<<endl;
+        cout<<"Unesi 19 za ispis svih ucenika"<<endl;
+        cout<<"Unesi 20 za ispis svih profesora"<<endl;
+        cout<<"Unesi 21 za ispis svih izostanaka"<<endl;
+        cout<<"Unesi 22 za ispis svih ocena"<<endl;
+        cout<<"Unesi 23 za ispis svih provera znanja"<<endl;
+        cout<<"Unesi 24 za ispis svih predmeta"<<endl;
+        cout<<"Unesi 25 za ispis svih razreda"<<endl;
+        cout<<"Unesi 26 za ispis svih objekata"<<endl;
         cout<<"Za izlazak unesi 0"<<endl;
         cin>>x;
-        vector<Osoba> Osobe;
-        vector<Ucenik> Ucenici;
-        vector<Profesor> Profesori;
-        vector<Izostanak> Izostanci;
-        vector<Ocena> Ocene;
-        vector<ProveraZnanja> ProvereZnanja;
-        vector<Predmet> Predmeti;
-        vector<Razred> Razredi;
+
 
         if(x==0)
         {
@@ -263,10 +278,10 @@ int main()
         {
             int brojO;
             cout<<"Koliko osoba zelite da stvorite:";
-                cin>>brojO;
+            cin>>brojO;
             for(int i=0; i<brojO; i++)
             {
-                Osobe.push_back(StvoriOsobu());
+                Osobe1.push_back(StvoriOsobu());
                 Sleep(3000);
             }
         }
@@ -274,10 +289,10 @@ int main()
         {
             int brojU;
             cout<<"Koliko ucenika zelite da stvorite:";
-                cin>>brojU;
+            cin>>brojU;
             for(int i=0; i<brojU; i++)
             {
-                Ucenici.push_back(StvoriUcenika());
+                Ucenici1.push_back(StvoriUcenika());
                 Sleep(3000);
             }
 
@@ -286,10 +301,10 @@ int main()
         {
             int brojP;
             cout<<"Koliko profesora zelite da stvorite:";
-                cin>>brojP;
+            cin>>brojP;
             for(int i=0; i<brojP; i++)
             {
-                Profesori.push_back(StvoriProfesora());
+                Profesori1.push_back(StvoriProfesora());
                 Sleep(3000);
             }
         }
@@ -297,10 +312,10 @@ int main()
         {
             int brojI;
             cout<<"Koliko izostnaka zelite da stvorite:";
-                cin>>brojI;
+            cin>>brojI;
             for(int i=0; i<brojI; i++)
             {
-                Izostanci.push_back(StvoriIzostanak());
+                Izostanci1.push_back(StvoriIzostanak());
                 Sleep(3000);
             }
         }
@@ -308,10 +323,10 @@ int main()
         {
             int brojO;
             cout<<"Koliko ocena zelite da stvorite:";
-                cin>>brojO;
+            cin>>brojO;
             for(int i=0; i<brojO; i++)
             {
-                Ocene.push_back(StvoriOcenu());
+                Ocene1.push_back(StvoriOcenu());
                 Sleep(3000);
             }
         }
@@ -319,10 +334,10 @@ int main()
         {
             int brojPz;
             cout<<"Koliko provera znanja zelite da stvorite:";
-                cin>>brojPz;
+            cin>>brojPz;
             for(int i=0; i<brojPz; i++)
             {
-                ProvereZnanja.push_back(StvoriProveruZnanja());
+                ProvereZnanja1.push_back(StvoriProveruZnanja());
                 Sleep(3000);
             }
         }
@@ -331,10 +346,10 @@ int main()
             int brojPr;
 
             cout<<"Koliko predmeta zelite da stvorite:";
-                cin>>brojPr;
+            cin>>brojPr;
             for(int i=0; i<brojPr; i++)
             {
-                Predmeti.push_back(StvoriPredmet());
+                Predmeti1.push_back(StvoriPredmet());
                 Sleep(3000);
             }
         }
@@ -342,10 +357,10 @@ int main()
         {
             int brojR;
             cout<<"Koliko razreda zelite da stvorite:";
-                cin>>brojR;
+            cin>>brojR;
             for(int i=0; i<brojR; i++)
             {
-                Razredi.push_back(StvoriRazred());
+                Razredi1.push_back(StvoriRazred());
                 Sleep(3000);
             }
         }
@@ -360,17 +375,19 @@ int main()
             cin>>prezime;
             cout<<"Unesi ime razreda:";
             cin>>imeR;
-            for(int i=0;i<Ucenici.size();i++)
+            Ucenik uc("d","d",1);
+            for(int i=0; i<Ucenici1.size(); i++)
             {
-                if(Ucenici.at(i).getIme()==ime && Ucenici.at(i).getPrezime()==prezime)
+                if(Ucenici1.at(i).getIme()==ime)
                 {
-                    for(int j=0;j<Razredi.size();j++)
-                    {
-                        if(Razredi.at(j).getIme()==imeR)
-                        {
-                            Razred.at(j).Ucenici.push_back(Ucenici.at(i));
-                        }
-                    }
+                    uc=Ucenici1.at(i);
+                }
+            }
+            for(int j=0; j<Razredi1.size(); j++)
+            {
+                if(Razredi1.at(j).getIme()==imeR)
+                {
+                    Razredi1.at(j).DodajUcenika(uc);
                 }
             }
         }
@@ -380,16 +397,15 @@ int main()
             string imeR;
             cout<<"Unesi ime razreda:";
             cin>>imeR;
-            for(int i=0;i<Razredi.size();i++)
+            Razred rz("a");
+            for(int i=0; i<Razredi1.size(); i++)
             {
-                if(Razredi.at(i).getIme()==imeR)
+                if(Razredi1.at(i).getIme()==imeR)
                 {
-                    for(int j=0;j<Ucenici.size();j++)
-                    {
-                        Razredi.at(i).Ucenici.at(j).predstaviSe();
-                    }
+                    rz=Razredi1.at(i);
                 }
             }
+            rz.IspisRazreda(rz);
         }
         if(x==11)
         {
@@ -399,32 +415,281 @@ int main()
             cin>>imeR;
             cout<<"Unesi ime ucenika:";
             cin>>ime;
-            for(int i=0;i<Razredi.size();i++)
+            Razred rz("s");
+            Ucenik uc("i","p",1);
+            for(int i=0; i<Razredi1.size(); i++)
             {
-                if(Razredi.at(i).getIme()==imeR)
+                if(Razredi1.at(i).getIme()==imeR)
                 {
-                    for(int j=0;j<Ucenici.size();j++)
-                    {
-                        if(Razredi.at(i).Ucenici.at(j).getIme()==ime)
-                        {
-                            cout<<"Ucenik ide u "<<imeR<<endl;
-                        }
-                    }
+                    rz=Razredi1.at(i);
                 }
             }
-            cout<<"Ucenik nije pronadjen..."<<endl;
+            for(int i=0; i<Ucenici1.size(); i++)
+            {
+                if(Ucenici1.at(i).getIme()==ime)
+                {
+                    uc=Ucenici1.at(i);
+                }
+            }
+            rz.DaLiIdeURazred(uc);
 
         }
         if(x==12)
         {
             system("cls");
-            string naziv;
-            cout<<"Unesi naziv predmeta";
-            cin>>naziv;
-
+            string ime,datum;
+            cout<<"Unesi ucenika:";
+            cin>>ime;
+            cout<<"Unesi datum provere znanja:";
+            cin>>datum;
+            ProveraZnanja pz("m","m","m",1);
+            for(int i=0; i<ProvereZnanja1.size(); i++)
+            {
+                if(ProvereZnanja1.at(i).getDatum()==datum)
+                {
+                    pz=ProvereZnanja1.at(i);
+                }
+            }
+            for(int j=0; j<Ucenici1.size(); j++)
+            {
+                if(Ucenici1.at(j).getIme()==ime)
+                {
+                    Ucenici1.at(j).ZakaziProveruUc(pz);
+                }
+            }
 
         }
+        if(x==13)
+        {
+            system("cls");
+            string ime,datum;
+            cout<<"Unesi ucenika:";
+            cin>>ime;
+            cout<<"Unesi datum izostanka:";
+            cin>>datum;
+            Izostanak iz("m",1,"m");
+            for(int i=0; i<Izostanci1.size(); i++)
+            {
+                if(Izostanci1.at(i).getDatum()==datum)
+                {
+                    iz=Izostanci1.at(i);
+                }
+            }
+            for(int j=0; j<Ucenici1.size(); j++)
+            {
+                if(Ucenici1.at(j).getIme()==ime)
+                {
+                    Ucenici1.at(j).dodajIzostanak(iz);
+                }
+            }
 
+        }
+        if(x==14)
+        {
+            system("cls");
+            string ime,naziv;
+            cout<<"Unesi ucenika:";
+            cin>>ime;
+            cout<<"Unesi naziv predmeta:";
+            cin>>naziv;
+            Predmet pr("a");
+            for(int i=0; i<Predmeti1.size(); i++)
+            {
+                if(Predmeti1.at(i).getNaziv()==naziv)
+                {
+                    pr=Predmeti1.at(i);
+                }
+            }
+            for(int j=0; j<Ucenici1.size(); j++)
+            {
+                if(Ucenici1.at(j).getIme()==ime)
+                {
+                    Ucenici1.at(j).DodajPredmet(pr);
+                }
+            }
+
+        }
+        if(x==15)
+        {
+            system("cls");
+            string naziv,ime;
+            cout<<"Unesi naziv predmeta:";
+            cin>>naziv;
+            cout<<"Unesi ime ucenika:";
+            cin>>ime;
+            double prosecna;
+            Ucenik uc("d","d",1);
+            for(int i=0; i<Ucenici1.size(); i++)
+            {
+                if(Ucenici1.at(i).getIme()==ime)
+                {
+                    uc=Ucenici1.at(i);
+                }
+            }
+            for(int j=0; j<Predmeti1.size(); j++)
+            {
+                if(Predmeti1.at(j).getNaziv()==naziv)
+                {
+
+                    prosecna=uc.ProsecnaOcenaIz(Predmeti1.at(j));
+                }
+            }
+            cout<<"Prosek ucenika iz "<<naziv<<" je "<<prosecna;
+        }
+        if(x==16)
+        {
+            system("cls");
+            string ime;
+            cout<<"Unesi ime ucenika:";
+            cin>>ime;
+            int prosecna;
+            Ucenik uc("d","d",1);
+            for(int i=0; i<Ucenici1.size(); i++)
+            {
+                if(Ucenici1.at(i).getIme()==ime)
+                {
+                    uc=Ucenici1.at(i);
+                }
+            }
+            prosecna=uc.OcenaIzVladanja();
+            cout<<"Ocena iz vladanja je "<<prosecna;
+        }
+        if(x==17)
+        {
+            system("cls");
+            string ime;
+            cout<<"Unesi ime ucenika:";
+            cin>>ime;
+            int prosecna;
+            Ucenik uc("d","d",1);
+            for(int i=0; i<Ucenici1.size(); i++)
+            {
+                if(Ucenici1.at(i).getIme()==ime)
+                {
+                    uc=Ucenici1.at(i);
+                }
+            }
+            prosecna=uc.Funkcionalnost(uc);
+            cout<<"Zakljucna ocena ucenika je "<<prosecna;
+
+        }
+        if(x==18)
+        {
+            system("cls");
+            cout<<"OSOBE:"<<endl;
+            for(int i=0; i<Osobe1.size(); i++)
+            {
+                Osobe1.at(i).predstaviSe();
+            }
+        }
+        if(x==19)
+        {
+            system("cls");
+            cout<<"UCENICI:"<<endl;
+            for(int i=0; i<Ucenici1.size(); i++)
+            {
+                Ucenici1.at(i).predstaviSe();
+            }
+        }
+        if(x==20)
+        {
+            system("cls");
+            cout<<"PROFESORI:"<<endl;
+            for(int i=0; i<Profesori1.size(); i++)
+            {
+                Profesori1.at(i).predstaviSe();
+            }
+        }
+        if(x==21)
+        {
+            system("cls");
+            cout<<"IZOSTANCI:"<<endl;
+            for(int i=0; i<Izostanci1.size(); i++)
+            {
+                Izostanci1.at(i).PrikaziIzostanak();
+            }
+        }
+        if(x==22)
+        {
+            system("cls");
+            cout<<"OCENE:"<<endl;
+            for(int i=0; i<Ocene1.size(); i++)
+            {
+                Ocene1.at(i).prikaziOcenu();
+            }
+        }
+        if(x==23)
+        {
+            system("cls");
+            cout<<"PROVERE ZNANJA:"<<endl;
+            for(int i=0; i<ProvereZnanja1.size(); i++)
+            {
+                ProvereZnanja1.at(i).ispisiProveruZnanja();
+            }
+        }
+        if(x==24)
+        {
+            system("cls");
+            cout<<"PREDMETI:"<<endl;
+            for(int i=0; i<Predmeti1.size(); i++)
+            {
+                Predmeti1.at(i).IspisP();
+            }
+        }
+        if(x==25)
+        {
+            system("cls");
+            cout<<"RAZREDI:"<<endl;
+            for(int i=0; i<Razredi1.size(); i++)
+            {
+                Razredi1.at(i).IspisR();
+            }
+        }
+        if(x==26)
+        {
+            system("cls");
+            cout<<"OBJEKTI:"<<endl;
+            cout<<"Osobe:"<<endl;
+            for(int i=0; i<Osobe1.size(); i++)
+            {
+                Osobe1.at(i).predstaviSe();
+            }
+            cout<<"Ucenici:"<<endl;
+            for(int i=0; i<Ucenici1.size(); i++)
+            {
+                Ucenici1.at(i).predstaviSe();
+            }
+            cout<<"Profesori:"<<endl;
+            for(int i=0; i<Profesori1.size(); i++)
+            {
+                Profesori1.at(i).predstaviSe();
+            }
+            cout<<"Izostanci:"<<endl;
+            for(int i=0; i<Izostanci1.size(); i++)
+            {
+                Izostanci1.at(i).PrikaziIzostanak();
+            }
+            cout<<"Ocene:"<<endl;
+            for(int i=0; i<Ocene1.size(); i++)
+            {
+                Ocene1.at(i).prikaziOcenu();
+            }
+            cout<<"Provere znanja:"<<endl;
+            for(int i=0; i<ProvereZnanja1.size(); i++)
+            {
+                ProvereZnanja1.at(i).ispisiProveruZnanja();
+            }
+            cout<<"Predmeti:"<<endl;
+            for(int i=0; i<Predmeti1.size(); i++)
+            {
+                Predmeti1.at(i).IspisP();
+            }
+            cout<<"Razredi:"<<endl<<endl;
+            for(int i=0; i<Razredi1.size(); i++)
+            {
+                Razredi1.at(i).IspisR();
+            }
+        }
 
 
         Sleep(5000);

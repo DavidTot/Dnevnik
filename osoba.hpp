@@ -11,6 +11,12 @@ protected:
     string prezime;
     int godine;
 public:
+    Osoba()
+    {
+        ime="David";
+        prezime="Tot";
+        godine=16;
+    }
     Osoba(string i,string p,int g)
     {
         ime=i;

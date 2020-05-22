@@ -10,15 +10,15 @@ protected:
     string datum;
     int vrednost;//od 1 do 5
 public:
+    Ocena()
+    {
+        datum="16.10.2020.";
+        vrednost=5;
+    }
     Ocena(string d,int v)
     {
         datum=d;
         vrednost=v;
-    }
-    Ocena()
-    {
-        datum="Prazno";
-        vrednost=1;
     }
     string getDatum()const
     {

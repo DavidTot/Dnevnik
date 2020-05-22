@@ -9,11 +9,15 @@ using namespace std;
 
 class Razred
 {
-private:
+protected:
     string imeRazreda;
     int brojUcenika=0;
     vector<Ucenik> Ucenici;
 public:
+    Razred()
+    {
+        imeRazreda="2-6";
+    }
     Razred(string imR)
     {
         imeRazreda=imR;
@@ -35,6 +39,10 @@ public:
         {
             Ucenici.at(i).predstaviSe();
         }
+    }
+    void IspisR()
+    {
+        cout<<"Ime razreda je "<<imeRazreda<<endl;
     }
     void DaLiIdeURazred(Ucenik uc1)//pretraga vectora
     {

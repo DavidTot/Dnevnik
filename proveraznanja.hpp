@@ -13,10 +13,15 @@ protected:
     Ocena oc;
     string predmet;
 public:
-    ProveraZnanja(string pred,string vp,string datum,int vrednost):oc(datum,vrednost)
+    ProveraZnanja()
     {
-        vrstaProvere=vp;
-        predmet=pred;
+        predmet="programiranje";
+        vrstaProvere="projekat";
+    }
+    ProveraZnanja(string predmett,string vrstap,string datum,int vrednost):oc(datum,vrednost)
+    {
+        vrstaProvere=vrstap;
+        predmet=predmett;
     }
     string getVrstaProvere()const
     {

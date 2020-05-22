@@ -15,6 +15,13 @@ protected:
     Predmet pr;
     vector<Razred> Razredi;
 public:
+    Profesor()
+    {
+        godineStaza=10;
+        godine=30;
+        ime="Nikola";
+        prezime="Novakovic";
+    }
     Profesor(int gs,string ime,string prezime,int godine,string naziv):Osoba(ime,prezime,godine),pr(naziv)
     {
         godineStaza=gs;

@@ -19,7 +19,13 @@ protected:
     vector<Predmet> Predmeti;
     static int BrojUcenika;//U celoj skoli
 public:
-    Ucenik(string i,string pr,int god):Osoba(i,pr,god)
+    Ucenik()
+    {
+        ime="David";
+        prezime="Tot";
+        godine=16;
+    }
+    Ucenik(string imee,string prezimee,int godinee):Osoba(imee,prezimee,godinee)
     {
 
     }

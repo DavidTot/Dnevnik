@@ -12,6 +12,13 @@ class Razredni:public Profesor
 private:
     Razred rz;
 public:
+    Razredni()
+    {
+        godine=30;
+        godineStaza=10;
+        ime="Nikola";
+        prezime="Novakovic";
+    }
     Razredni(int gs,string ime,string prezime,int godine,string naziv,string brR):Profesor(gs,ime,prezime,godine,naziv),rz(brR)
     {
 

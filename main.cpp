@@ -36,16 +36,16 @@ int main()
 {
     IspisiFajl("Fajl.txt");
     Osoba o1("David","Tot",16);
-    Izostanak iz1("16.10.2020.",0,"pobegao");
+    Izostanak izz1("16.10.2020.",0,"pobegao");
     Ocena oc1("26.4.2020",5);
     ProveraZnanja proz1("Matematika","pismeni zadatak",oc1.getDatum(),oc1.getVrednost());
     o1.predstaviSe();
-    iz1.PrikaziIzostanak();
+    izz1.PrikaziIzostanak();
     proz1.ispisiProveruZnanja();
     oc1.prikaziOcenu();
     cout<<endl<<endl;
     cout<<o1;
-    cout<<iz1;
+    cout<<izz1;
     cout<<oc1;
     Profesor prof1(2,"Davor","Kumozec",27,"Diskretna Matematika");
     prof1.predstaviSe();
@@ -64,6 +64,9 @@ int main()
     Predmet pr1("Programiranje");
     Predmet pr2("Matematika");
     Predmet pr3("Srpski");
+    Izostanak iz1("16.5.2020",0,"Pobegao");
+    Izostanak iz2("12.3.2020",1,"Slavio slavu");
+    Izostanak iz3("16.5.2020",0,"Zakasnio");
     ProveraZnanja pz1("Programiranje","Kontrolni","12.3.2020",4);
     ProveraZnanja pz2("Programiranje","Odgovaranje","17.2.2020",4);
     ProveraZnanja pz3("Programiranje","Aktivnost","16.5.2020",5);
@@ -77,6 +80,10 @@ int main()
     uc1.DodajPredmet(pr1);
     uc1.DodajPredmet(pr2);
     uc1.DodajPredmet(pr3);
+
+    uc1.dodajIzostanak(iz1);
+    uc1.dodajIzostanak(iz2);
+    uc1.dodajIzostanak(iz3);
 
     uc1.ZakaziProveruUc(pz1);
     uc1.ZakaziProveruUc(pz2);

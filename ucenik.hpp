@@ -31,6 +31,10 @@ public:
     {
         Predmeti.push_back(pr1);
     }
+    void dodajIzostanak(Izostanak iz1)
+    {
+        Izostanci.push_back(iz1);
+    }
     double ProsecnaOcenaIz(Predmet pr)
     {
         double zbir=0;
@@ -57,14 +61,14 @@ public:
         Osoba::predstaviSe();
         cout<<"I ja sam UCENIK"<<endl<<endl;
     }
-    /*int OcenaIzVladanja()
+    int OcenaIzVladanja()
     {
         int ocena;
         int ni=0;//neopravdani izostanci
         unsigned long long int i;
         for(i=0;i<Izostanci.size();i++)
         {
-            if(Izostanci[i].getTip()==0)
+            if(Izostanci.at(i).getTip()==0)
             {
                 ni=ni+1;
             }
@@ -74,7 +78,7 @@ public:
         if(ni>=10){return ocena=3;}
         if(ni>=5){return ocena=4;}
         return ocena=5;
-    }*/
+    }
     double Funkcionalnost(Ucenik uc1)
     {
         unsigned long long int i;
@@ -86,10 +90,10 @@ public:
             ocena=round(oc);
             zbir=zbir+ocena;
         }
-        //int vladanje=uc1.OcenaIzVladanja();
-        //double prosecna=zbir+vladanje/(broj+1);
-        cout<<"PROSEK UCENIKA JE: "<<zbir/broj;
-        double prosecna=zbir/broj;
+        int vladanje=uc1.OcenaIzVladanja();
+        cout<<"Prosecna ocena iz Vladanja je "<<vladanje<<endl;
+        cout<<"PROSEK UCENIKA JE: "<<(zbir+vladanje)/(broj+1);
+        double prosecna=(zbir+vladanje)/(broj+1);
         int zaokruzeno=round(prosecna);
         if(zaokruzeno==1){cout<<"-NEDOVOLJAN"<<endl;}
         if(zaokruzeno==2){cout<<"-DOVOLJAN"<<endl;}

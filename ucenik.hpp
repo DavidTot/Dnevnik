@@ -34,17 +34,29 @@ public:
     double ProsecnaOcenaIz(Predmet pr)
     {
         double zbir=0;
-        unsigned long long int i,broj;
-        for(i=0; i<ProvereZnanja.size(); i++,broj++)
+        unsigned long long int i,broj=0;
+        //cout<<"Pre fora: zbir="<<zbir<<endl;
+        for(i=0; i<ProvereZnanja.size(); i++)
         {
+            //cout<<"Pre ifa: zbir="<<zbir<<endl;
             if ((ProvereZnanja.at(i)).getNazivPredmeta()==pr.getNaziv())
             {
+                //cout<<"U ifu1: zbir="<<zbir<<endl;
                 zbir=ProvereZnanja.at(i).getVrednost()+zbir;
+                broj++;
+                //cout<<"U ifu2: zbir="<<zbir<<endl;
             }
+            //cout<<"Posle ifa: zbir="<<zbir<<endl;
         }
+        //cout<<"Pre returna: zbir="<<zbir<<endl;
+        cout<<"Prosecna ocena iz "<<pr.getNaziv()<<" je "<<zbir/broj<<endl;
         return zbir/broj;
     }
-
+    void predstaviSe()
+    {
+        Osoba::predstaviSe();
+        cout<<"I ja sam UCENIK"<<endl<<endl;
+    }
     /*int OcenaIzVladanja()
     {
         int ocena;
@@ -63,16 +75,11 @@ public:
         if(ni>=5){return ocena=4;}
         return ocena=5;
     }*/
-    void predstaviSe()
-    {
-        Osoba::predstaviSe();
-        cout<<"I ja sam UCENIK"<<endl<<endl;
-    }
     double Funkcionalnost(Ucenik uc1)
     {
         unsigned long long int i;
-        int zbir=0,ocena,broj;
-        double oc;
+        int ocena,broj=0;
+        double oc,zbir=0;
         for(i=0;i<Predmeti.size();i++,broj++)
         {
             oc=uc1.ProsecnaOcenaIz(Predmeti[i]);
@@ -81,14 +88,26 @@ public:
         }
         //int vladanje=uc1.OcenaIzVladanja();
         //double prosecna=zbir+vladanje/(broj+1);
+        cout<<"PROSEK UCENIKA JE: "<<zbir/broj;
         double prosecna=zbir/broj;
-        cout<<"Ucenik ima prosek: "<<prosecna<<endl;
+        int zaokruzeno=round(prosecna);
+        if(zaokruzeno==1){cout<<"-NEDOVOLJAN"<<endl;}
+        if(zaokruzeno==2){cout<<"-DOVOLJAN"<<endl;}
+        if(zaokruzeno==3){cout<<"-DOBAR"<<endl;}
+        if(zaokruzeno==4){cout<<"-VRLO DOBAR"<<endl;}
+        if(zaokruzeno==5){cout<<"-ODLICAN"<<endl;}
         ofstream Fajl2;
         Fajl2.open("Fajl2.txt");
         Fajl2<<"Prosek ucenika je:"<<prosecna;
+        if(zaokruzeno==1){Fajl2<<"-NEDOVOLJAN"<<endl;}
+        if(zaokruzeno==2){Fajl2<<"-DOVOLJAN"<<endl;}
+        if(zaokruzeno==3){Fajl2<<"-DOBAR"<<endl;}
+        if(zaokruzeno==4){Fajl2<<"-VRLO DOBAR"<<endl;}
+        if(zaokruzeno==5){Fajl2<<"-ODLICAN"<<endl;}
         Fajl2.close();
         return prosecna;
     }
+
 
 };
 int Ucenik::BrojUcenika=0;

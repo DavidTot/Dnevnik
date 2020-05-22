@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1589998766 source:c:\users\munja\desktop\dnevnik\main.cpp
+1590134163 source:c:\users\munja\desktop\dnevnik\main.cpp
 	<iostream>
 	<fstream>
 	<vector>
@@ -19,7 +19,7 @@
 	<string>
 	<vector>
 
-1589998823 c:\users\munja\desktop\dnevnik\ucenik.hpp
+1590134699 c:\users\munja\desktop\dnevnik\ucenik.hpp
 	<string>
 	<vector>
 	<math.h>
@@ -49,7 +49,7 @@
 	<vector>
 	"proveraznanja.hpp"
 
-1589995740 c:\users\munja\desktop\dnevnik\proveraznanja.hpp
+1590132082 c:\users\munja\desktop\dnevnik\proveraznanja.hpp
 	<string>
 	<vector>
 	"ocena.hpp"
